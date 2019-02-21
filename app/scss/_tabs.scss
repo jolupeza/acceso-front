@@ -1,0 +1,92 @@
+.Tabs__nav {
+  .nav-tabs {
+    border-bottom: none;
+  }
+  .nav-item {
+    margin-bottom: 0;
+    text-transform: uppercase;
+  }
+  .nav-link {
+    border: none;
+    color: $textColor;
+    font-size: .875rem;
+    &.active {
+      border: none;
+      border-bottom: 3px solid $thirdColor;
+      color: $headingColor;
+      font-weight: 700;
+    }
+    &:focus, &:hover {
+      border-bottom: 3px solid $thirdColor;
+      color: $headingColor;
+    }
+    @media screen and (max-width: 767px) {
+      padding: .5rem;
+    }
+    @media screen and (max-width: 575px) {
+      flex: 1 1 auto;
+      text-align: center;
+    }
+  }
+}
+.Tabs__content {
+  background-color: #f5f5f5;
+  padding: 2.5rem;
+  .tab-pane {
+
+  }
+  h3 {
+    color: $headingColor;
+    font-size: 1.875rem;
+    font-weight: 700;
+  }
+  ul {
+    list-style: none;
+    padding-left: 0;
+    li {
+      font-weight: 700;
+      margin-bottom: .8rem;
+      &::before {
+        content: "\e919";
+        color: $firstColor;
+        display: inline-block;
+        font-family: 'icomoon' !important;
+        font-size: .5rem;
+        margin-right: .5rem;
+        vertical-align: middle;
+      }
+    }
+  }
+  .Table {
+    article {
+      align-items: center;
+      border-bottom: 1px solid #d8d8d8;
+      display: flex;
+      font-weight: 400;
+      margin-bottom: .3rem;
+      padding: .5rem;
+      width: 80%;
+      word-break: break-all;
+      @media screen and (max-width: 1400px) {
+        width: 100%;
+      }
+      > span {
+        display: inline-block;
+        font-weight: 700;
+        min-width: 25%;
+        text-align: center;
+        &.sm {
+          [class^="icon-"] {
+            font-size: 1.5rem;
+          }
+        }
+        [class^="icon-"] {
+          font-size: 3rem;
+        }
+        @media screen and (max-width: 1199px) {
+          min-width: 50%;
+        }
+      }
+    }
+  }
+}

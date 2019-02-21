@@ -1,0 +1,98 @@
+.Slider {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2.5rem;
+  @media screen and (max-width: 991px) {
+    margin-bottom: 1rem;
+  }
+  @media screen and (max-width: 767px) {
+    flex-wrap: wrap;
+  }
+  &--captionVertical {
+    .bx-pager {
+      align-content: center;
+      align-items: center;
+      display: flex;
+      flex-wrap: wrap;
+      width: 15%;
+      @media screen and (max-width: 767px) {
+        flex-wrap: nowrap;
+        justify-content: center;
+        margin-top: 1rem;
+        width: 100%;
+        order: 2;
+      }
+      a {
+        width: 100%;
+        @media screen and (max-width: 767px) {
+          margin-right: 1.5rem;
+          max-width: 20%;
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+    .bx-wrapper {
+      margin-bottom: 0;
+      width: 80%;
+      @media screen and (max-width: 767px) {
+        order: 1;
+        width: 100%;
+      }
+    }
+    &.isSold {
+      &::after {
+        background: transparent url('./../images/vendido.png') center center no-repeat;
+        background-size: contain;
+        bottom: 0;
+        content: "";
+        display: block;
+        left: 0;
+        margin-left: 15%;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 9;
+        @media screen and (max-width: 767px) {
+          background-position: center 0;
+          margin-left: 0;
+        }
+      }
+    }
+  }
+  .bx-wrapper {
+    background-color: #f5f5f5;
+    border: none;
+    box-shadow: none;
+    .bx-controls-direction {
+      a {
+        @media screen and (max-width: 991px) {
+          display: none;
+        }
+      }
+    }
+  }
+  .bxslider {
+    li {
+      text-align: center;
+    }
+  }
+  .bx-pager {
+    a {
+      display: block;
+      margin-bottom: .8rem;
+      opacity: .5;
+      transform: scale(1);
+      transition: transform .2s ease;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      &.active {
+        border: 1px solid $borderColor;
+        opacity: 1;
+        transform: scale(1.1);
+      }
+    }
+  }
+}

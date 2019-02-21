@@ -1,0 +1,136 @@
+.Cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.Cards__loading {
+  align-items: center;
+  color: $firstColor;
+  display: flex;
+  font-size: 6rem;
+  height: 100vh;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.Cards__item {
+  align-content: space-between;
+  border: 1px solid $borderColor;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+  width: 18%;
+  &--25 {
+    width: 23%;
+  }
+  @media screen and (max-width: 1199px) {
+    width: 32%;
+  }
+  @media screen and (max-width: 991px) {
+    width: 48%;
+  }
+  @media screen and (max-width: 767px) and (orientation: portrait) {
+    width: 100%;
+  }
+}
+.Cards__figure {
+  background-color: $grayColor;
+  margin-bottom: 0;
+  position: relative;
+  width: 100%;
+  &--sold {
+    a {
+      &::after {
+        background: transparent url('./../images/vendido.png') center center no-repeat;
+        background-size: contain;
+        bottom: 0;
+        content: "";
+        display: block;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+    }
+  }
+}
+.Cards__badge {
+  color: white;
+  font-size: .75rem;
+  padding: .3rem .5rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+  text-transform: uppercase;
+  &--nuevo {
+    background-color: $firstColor;
+  }
+  &--seminuevo {
+    background-color: $firstColorAlt;
+  }
+  &--populares {
+    background-color: $secondColor;
+  }
+}
+.Cards__info {
+  align-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+  height: 260px;
+  padding: .75rem 1rem;
+  text-align: center;
+  width: 100%;
+  @media screen and (max-width: 1199px) {
+    height: 220px;
+  }
+  @media screen and (max-width: 767px) {
+    height: auto;
+  }
+}
+.Cards__title {
+  color: $headingColor;
+  font-size: 1.875rem;
+  width: 100%;
+  @media screen and (max-width: 1400px) {
+    font-size: 1.5rem;
+  }
+  @media screen and (max-width: 991px) {
+    font-size: 1.25rem;
+  }
+}
+.Cards__text {
+  width: 100%;
+  strong {
+    color: $accentColor;
+    font-size: 1.25rem;
+    @media screen and (max-width: 1400px) {
+      display: block;
+    }
+  }
+}
+.Cards__subtitle {
+  font-size: 1.5rem;
+  width: 100%;
+  @media screen and (max-width: 1400px) {
+    font-size: 1.25rem;
+  }
+  @media screen and (max-width: 991px) {
+    font-size: 1.125rem;
+  }
+}
+.Cards__resalt {
+  color: $accentColor;
+  font-size: 2.25rem;
+  font-weight: 700;
+  width: 100%;
+  @media screen and (max-width: 1400px) {
+    font-size: 1.75rem;
+  }
+  @media screen and (max-width: 991px) {
+    font-size: 1.625rem;
+  }
+}
+.Cards__button {
+  width: 100%;
+}

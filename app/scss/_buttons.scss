@@ -1,0 +1,56 @@
+.Button {
+  border-radius: 0;
+  font-size: 1.125rem;
+  padding: .75rem 1.5rem;
+  transition: background-color .3s ease-out;
+  &--full {
+    width: 100%;
+  }
+  &--outline {
+    background-color: transparent;
+    border: {
+      style: solid;
+      width: 2px;
+    }
+    &--light {
+      border-color: white;
+      color: white;
+      &:focus, &:hover {
+        border-color: $firstColorAlt;
+      }
+    }
+    &--accent {
+      border-color: $accentColor;
+      // color: white;
+      &:focus, &:hover {
+        border-color: $firstColorAlt;
+      }
+    }
+  }
+  &--first {
+    background-color: $firstColor;
+    color: white;
+    &:focus, &:hover {
+      background-color: $firstColorAlt;
+      color: white;
+    }
+  }
+  &--second {
+    background-color: $secondColor;
+    color: white;
+  }
+  &--secondAlt {
+    background-color: $secondColorAlt;
+    color: white;
+    &:focus, &:hover {
+      background-color: $secondColor;
+    }
+  }
+  &--accent {
+    background-color: $accentColor;
+    color: white;
+    &:focus, &:hover {
+      background-color: $accentColorAlt;
+    }
+  }
+}

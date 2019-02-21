@@ -1,0 +1,29 @@
+.Pagination__list {
+  margin-bottom: 0;
+  .page-item {
+    margin-right: .3rem;
+    &:last-child {
+      margin-right: 0;
+    }
+    &.active {
+      .page-link {
+        background-color: $borderColorAlt;
+        border-color: $borderColorAlt;
+        color: $textColor;
+      }
+    }
+  }
+  .page-link {
+    border-radius: 50%;
+    border: none;
+    color: $textColor;
+    &:first-child {
+      border-top-left-radius: 50%;
+      border-bottom-left-radius: 50%;
+    }
+    &:last-child {
+      border-top-right-radius: 50%;
+      border-bottom-right-radius: 50%;
+    }
+  }
+}

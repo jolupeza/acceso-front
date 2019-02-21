@@ -1,0 +1,103 @@
+.Single__top {
+  background-color: $grayColor;
+  margin-bottom: 2rem;
+  padding: 1rem .8rem;
+}
+.Single__figure {
+  position: relative;
+}
+.Single__header {
+  display: flex;
+  justify-content: space-between;
+  margin: 1.5rem 0;
+  .Single__price {
+    flex-wrap: wrap;
+    text-align: right;
+    @media screen and (max-width: 991px) {
+      text-align: left;
+    }
+    .Single__feeSubtitle, .Single__fee {
+      margin-right: 0;
+      width: 100%;
+      @media screen and (max-width: 991px) {
+        width: auto;
+      }
+    }
+    .Single__feeSubtitle {
+      @media screen and (max-width: 991px) {
+        margin-right: .8rem;
+      }
+    }
+  }
+  .Single__header__title, .Single__price {
+    @media screen and (max-width: 991px) {
+      width: 100%;
+    }
+  }
+  @media screen and (max-width: 991px) {
+    flex-wrap: wrap;
+  }
+}
+.Single__state {
+  font-size: .875rem;
+  &--nuevo {
+    color: $firstColor;
+  }
+  &--seminuevo {
+    color: $firstColorAlt;
+  }
+  &--populares {
+    color: $secondColor;
+  }
+}
+.Single__title {
+  color: $headingColor;
+  font-size: 2.75rem;
+  font-weight: 700;
+}
+.Single__sold {
+  color: $thirdColor;
+  font-size: .875rem;
+  font-weight: 700;
+}
+.Single__price {
+  align-items: center;
+  display: flex;
+  margin: .8rem 0;
+  @media screen and (max-width: 767px) {
+    flex-wrap: wrap;
+  }
+}
+.Single__feeSubtitle {
+  font-size: 1.5rem;
+  margin-right: 1.5rem;
+  @media screen and (max-width: 767px) {
+    font-size: .875rem;
+  }
+}
+.Single__fee {
+  color: $firstColor;
+  font-size: 2.75rem;
+  font-weight: 700;
+  @media screen and (max-width: 767px) {
+    font-size: 2rem;
+  }
+}
+.Single__form {
+  display: none;
+  margin: 2rem auto;
+  width: 50%;
+  @media screen and (max-width: 1400px) {
+    width: 70%;
+  }
+  @media screen and (max-width: 1199px) {
+    width: 90%;
+  }
+}
+.Single__contact {
+  margin-bottom: .8rem;
+  overflow: hidden;
+  h4 {
+    font-weight: 700;
+  }
+}

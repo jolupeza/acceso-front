@@ -1,0 +1,73 @@
+.Sidebar {
+  background-color: $bodyColor;
+  height: 100vh;
+  left: -100%;
+  overflow-y: auto;
+  position: fixed;
+  top: var(--top-sidebar);
+  transition: left .2s ease-in-out;
+  width: 100%;
+  z-index: 99;
+  &.active {
+    left: 0;
+  }
+  .Header__menu {
+    margin-right: 0;
+  }
+  .Header__mainMenu  {
+    flex-wrap: wrap;
+    li {
+      border-top: 1px solid $borderColor;
+      font-size: 1.75rem;
+      margin: 0;
+      padding: .8rem 0;
+      width: 100%;
+      &:last-child {
+        border-bottom: 1px solid $borderColor;
+      }
+      &.current-menu-item, &.current_page_item {
+        a {
+          color: $thirdColor;
+        }
+      }
+      a {
+        color: $textColor;
+        padding: 0 .8rem;
+        &:focus, &:hover {
+          color: $thirdColor;
+        }
+      }
+    }
+  }
+}
+.Sidebar__title {
+  color: $secondColorAlt;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.Sidebar__params {
+  background-color: #f9f9f9;
+  margin: 1rem 0;
+  padding: 1rem;
+}
+.Sidebar__param {
+  margin-right: 1rem;
+  [class^="icon-"] {
+    color: $secondColorAlt;
+    cursor: pointer;
+    font-size: .875rem;
+  }
+}
+.Sidebar__action {
+  background-color: transparent;
+  border: none;
+  color: $secondColorAlt;
+  cursor: pointer;
+  font-weight: 700;
+  padding: 0;
+  &:hover {
+    color: $secondColor;
+    text-decoration: none;
+  }
+}

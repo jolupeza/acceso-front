@@ -1,0 +1,50 @@
+{
+  "name": "acceso-front",
+  "version": "1.0.0",
+  "description": "Frontend Website Acceso Crédito Vehicular",
+  "main": "gulpfile.js",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jolupeza/acceso-front"
+  },
+  "keywords": [
+    "Autoclass",
+    "Website",
+    "Watson",
+    "Agencia Watson"
+  ],
+  "author": "José Pérez <joseluis@watson.pe>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jolupeza/acceso-front/issues"
+  },
+  "homepage": "https://github.com/jolupeza/acceso-front#README",
+  "devDependencies": {
+    "animate.css": "^3.7.0",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "bootstrap": "^4.3.1",
+    "browser-sync": "^2.26.3",
+    "browserify": "^16.2.3",
+    "del": "^3.0.0",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssnano": "^2.1.3",
+    "gulp-if": "^2.0.2",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-purifycss": "^0.2.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.1",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.14.7",
+    "vinyl-source-stream": "^2.0.0",
+    "yargs": "^13.2.1"
+  }
+}

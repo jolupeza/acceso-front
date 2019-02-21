@@ -1,0 +1,53 @@
+:root {
+  --top-sidebar: 0;
+  --body-ov: 'auto';
+}
+
+body {
+  background-color: $bodyColor;
+  color: $textColor;
+  font-family: $body-font;
+  font-size: 16px;
+  overflow: var(--body-ov);
+  position: relative;
+}
+a {
+  color: $firstColor;
+  transition: color .3s ease-in-out;
+  &:hover {
+    color: $firstColorAlt;
+    text-decoration: none;
+  }
+}
+hr {
+  background-color: $borderColor;
+}
+.text-white {
+  color: white;
+}
+.text-firstColor {
+  color: $firstColor;
+}
+.text-secondColor {
+  color: $secondColor;
+}
+.text-light {
+  font-weight: 300;
+}
+.text-bold {
+  font-weight: 700;
+}
+.ArrowTop {
+  background-color: $secondColor;
+  border: none;
+  border-radius: 50%;
+  bottom: 15px;
+  box-shadow: 1px 1px 3px rgba(black, .5);
+  color: white;
+  cursor: pointer;
+  display: none;
+  font-size: 2rem;
+  position: fixed;
+  right: 15px;
+  z-index: 9;
+}

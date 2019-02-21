@@ -1,0 +1,25 @@
+// Bootstrap
+@import './../../node_modules/bootstrap/scss/bootstrap';
+
+//  Animate
+@import "./../../node_modules/animate.css/animate";
+
+// Slick
+@import "./../../node_modules/bxslider/dist/jquery.bxslider";
+
+@import "vars";
+@import "fonts";
+@import "general";
+@import "forms";
+@import "buttons";
+@import "header";
+@import "footer";
+@import "panel";
+@import "main";
+@import "cards";
+@import "sidebar";
+@import "pagination";
+@import "single";
+@import "tabs";
+@import "bxSlider";
+@import "slider";
