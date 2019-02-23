@@ -24,9 +24,9 @@
   },
   "homepage": "https://github.com/jolupeza/acceso-front#README",
   "devDependencies": {
+    "@babel/core": "^7.3.3",
+    "@babel/preset-env": "^7.3.1",
     "animate.css": "^3.7.0",
-    "babel-core": "^6.26.3",
-    "babel-preset-env": "^1.7.0",
     "bootstrap": "^4.3.1",
     "browser-sync": "^2.26.3",
     "browserify": "^16.2.3",
@@ -44,6 +44,8 @@
     "gulp-uglify": "^3.0.1",
     "jquery": "^3.3.1",
     "popper.js": "^1.14.7",
+    "stylelint": "^9.10.1",
+    "stylelint-config-standard": "^18.2.0",
     "vinyl-source-stream": "^2.0.0",
     "yargs": "^13.2.1"
   }

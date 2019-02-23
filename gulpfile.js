@@ -33,7 +33,7 @@ let config = {
 let autoprefixBrowsers = ['> 1%', 'last 2 versions', 'IE 9', 'IE 10', 'IE 11'];
 
 gulp.task('style', () => {
-  return gulp.src(config.scssDir + '/*.scss')
+  return gulp.src(config.scssDir + '/**/*.scss')
       .pipe(sourcemaps.init())
       .pipe(sass())
       .on('error', sass.logError)
@@ -45,6 +45,15 @@ gulp.task('style', () => {
       .pipe(gulp.dest(config.cssDir))
       .pipe(sync.stream())
 });
+
+gulp.task('lint-css', gulp.series('style', () => {
+  return gulp.src(config.scssDir + '/**/*.scss')
+    .pipe(stylelint({
+      reporters: [
+        {formatter: 'string', console: true}
+      ]
+  }));
+}));
 
 gulp.task('css', () => {
   return gulp.src(config.cssDir + '/style.css')
@@ -62,19 +71,19 @@ gulp.task('concat', () => {
   ])
   .pipe(sourcemaps.init())
   .pipe(babel({
-    presets: ['env']
+    presets: ['@babel/env']
   }))
   .pipe(concat('script.js'))
   .pipe(sourcemaps.write('.'))
   .pipe(gulp.dest(config.jsDir))
 });
 
-gulp.task('compress', ['concat'], () => {
+gulp.task('compress', gulp.series('concat', () => {
   return gulp.src(config.jsDir + '/script.js')
     .pipe(uglify())
     .on('error', console.error.bind(console))
     .pipe(gulp.dest(config.jsDir + '/min'))
-});
+}));
 
 gulp.task('imagemin', () => {
   return gulp.src([
@@ -97,32 +106,31 @@ gulp.task('browserify', () => {
     .pipe(gulp.dest(config.jsDir + '/min/'))
 });
 
-gulp.task('minifyjs', ['browserify'], () => {
+gulp.task('minifyjs', gulp.series('browserify', () => {
   return gulp.src(config.jsDir + '/min/bundle.js')
     .pipe(uglify())
     .on('error', console.error.bind(console))
     .pipe(gulp.dest(config.jsDir + '/min/'));
-});
+}));
 
-gulp.task('js-sync', ['compress'], () => {
+gulp.task('js-sync', gulp.series('compress', () => {
   sync.reload();
-});
+}));
 
-gulp.task('browsersync', ['compress', 'style'], () => {
+gulp.task('browsersync', gulp.parallel('compress', 'style'), () => {
   sync.init({
-    proxy: "autoclass.front",
-    browser: "firefox"
+    proxy: "acceso.front",
+    browser: "firefox",
+    reloadDebounce: 500
     //browser: ["chrome", "firefox", "google-chrome"]
   });
 
   gulp.watch([config.template + '/*.html', config.scssDir + '/**/*.scss']).on('change', sync.reload);
-  gulp.watch(config.scssDir + '/**/*.scss', ['style']);
+  gulp.watch(config.scssDir + '/**/*.scss', ['lint-css']);
   gulp.watch(config.jsDir + '/*.js', ['js-sync']);
 });
 
-//gulp.task('default', () => {
-//  gulp.watch(config.scssDir + '/**/*.scss', ['style']);
-//});
+gulp.task('default', gulp.series('browsersync'));
 
 /*gulp.task()
 gulp.src()
