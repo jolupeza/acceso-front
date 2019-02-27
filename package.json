@@ -12,7 +12,9 @@
     "url": "https://github.com/jolupeza/acceso-front"
   },
   "keywords": [
-    "Autoclass",
+    "Acceso",
+    "Crédito",
+    "Vehicular",
     "Website",
     "Watson",
     "Agencia Watson"
@@ -28,10 +30,11 @@
     "@babel/preset-env": "^7.3.1",
     "animate.css": "^3.7.0",
     "bootstrap": "^4.3.1",
+    "bourbon": "^5.1.0",
     "browser-sync": "^2.26.3",
     "browserify": "^16.2.3",
     "del": "^3.0.0",
-    "gulp": "^4.0.0",
+    "gulp": "^3.9.1",
     "gulp-autoprefixer": "^6.0.0",
     "gulp-babel": "^8.0.0",
     "gulp-concat": "^2.6.1",
@@ -41,6 +44,7 @@
     "gulp-purifycss": "^0.2.0",
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.5",
+    "gulp-stylelint": "^8.0.0",
     "gulp-uglify": "^3.0.1",
     "jquery": "^3.3.1",
     "popper.js": "^1.14.7",

@@ -4,6 +4,7 @@ const gulp = require('gulp'),
       sourcemaps = require('gulp-sourcemaps'),
       cssnano = require('gulp-cssnano'),
       purify = require('gulp-purifycss'),
+      stylelint = require('gulp-stylelint'),
       argv = require('yargs').argv,
       gulpIf = require('gulp-if'),
       babel = require('gulp-babel'),
@@ -46,14 +47,14 @@ gulp.task('style', () => {
       .pipe(sync.stream())
 });
 
-gulp.task('lint-css', gulp.series('style', () => {
+gulp.task('lint-css', ['style'], () => {
   return gulp.src(config.scssDir + '/**/*.scss')
     .pipe(stylelint({
       reporters: [
         {formatter: 'string', console: true}
       ]
   }));
-}));
+});
 
 gulp.task('css', () => {
   return gulp.src(config.cssDir + '/style.css')
@@ -78,12 +79,12 @@ gulp.task('concat', () => {
   .pipe(gulp.dest(config.jsDir))
 });
 
-gulp.task('compress', gulp.series('concat', () => {
+gulp.task('compress', ['concat'], () => {
   return gulp.src(config.jsDir + '/script.js')
     .pipe(uglify())
     .on('error', console.error.bind(console))
     .pipe(gulp.dest(config.jsDir + '/min'))
-}));
+});
 
 gulp.task('imagemin', () => {
   return gulp.src([
@@ -106,22 +107,21 @@ gulp.task('browserify', () => {
     .pipe(gulp.dest(config.jsDir + '/min/'))
 });
 
-gulp.task('minifyjs', gulp.series('browserify', () => {
+gulp.task('minifyjs', ['browserify'], () => {
   return gulp.src(config.jsDir + '/min/bundle.js')
     .pipe(uglify())
     .on('error', console.error.bind(console))
     .pipe(gulp.dest(config.jsDir + '/min/'));
-}));
+});
 
-gulp.task('js-sync', gulp.series('compress', () => {
+gulp.task('js-sync', ['compress'], () => {
   sync.reload();
-}));
+});
 
-gulp.task('browsersync', gulp.parallel('compress', 'style'), () => {
+gulp.task('browsersync', ['compress', 'style'], () => {
   sync.init({
     proxy: "acceso.front",
-    browser: "firefox",
-    reloadDebounce: 500
+    browser: "firefox"
     //browser: ["chrome", "firefox", "google-chrome"]
   });
 
@@ -130,7 +130,7 @@ gulp.task('browsersync', gulp.parallel('compress', 'style'), () => {
   gulp.watch(config.jsDir + '/*.js', ['js-sync']);
 });
 
-gulp.task('default', gulp.series('browsersync'));
+gulp.task('default', ['browsersync']);
 
 /*gulp.task()
 gulp.src()

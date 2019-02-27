@@ -15,7 +15,7 @@
     "at-rule-name-space-after": "always-single-line",
     "at-rule-semicolon-newline-after": "always",
     "at-rule-no-unknown": [true, {
-        ignoreAtRules: ["mixin", "at-root", "else", "if", "each", "return", "function"]
+        ignoreAtRules: ["mixin", "at-root", "else", "if", "each", "return", "function", "include"]
     }],
     "block-closing-brace-empty-line-before": "never",
     "block-closing-brace-newline-after": "always",

@@ -1,0 +1,45 @@
+.Carousel {
+  .carousel-indicators {
+    li {
+      background-color: transparent;
+      border: 1px solid white;
+      border-radius: 50%;
+      height: 10px;
+      width: 10px;
+      &.active {
+        background-color: white;
+      }
+    }
+  }
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 10%;
+  }
+  .carousel-caption {
+    align-content: center;
+    bottom: 0;
+    display: flex;
+    flex-wrap: wrap;
+    left: 10%;
+    padding: 0;
+    right: auto;
+    text-align: left;
+    top: 0;
+    .Carousel__caption__subtitle {
+      color: white;
+      font-size: 1.125rem;
+      text-transform: uppercase;
+      width: 100%;
+    }
+    .Carousel__caption__title {
+      color: white;
+      font-family: $frankfurter-font;
+      font-size: 3rem;
+      text-transform: uppercase;
+      width: 100%;
+    }
+    p {
+      width: 100%;
+    }
+  }
+}

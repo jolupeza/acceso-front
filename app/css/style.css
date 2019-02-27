@@ -4,6 +4,8 @@
  * Copyright 2011-2019 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
+@import url("https://fonts.googleapis.com/css?family=Muli:400,700");
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -10672,14 +10674,36 @@ a.text-dark:hover, a.text-dark:focus {
     transition: none !important; } }
 
 @font-face {
-  font-family: 'icomoon';
-  src: url("./../fonts/icomoon.eot?uwodiy");
-  src: url("./../fonts/icomoon.eot?uwodiy#iefix") format("embedded-opentype"), url("./../fonts/icomoon.ttf?uwodiy") format("truetype"), url("./../fonts/icomoon.woff?uwodiy") format("woff"), url("./../fonts/icomoon.svg?uwodiy#icomoon") format("svg");
+  font-family: "CenturyGothic-Bold";
+  src: url("./../fonts/CenturyGothic-Bold.eot?#iefix") format("embedded-opentype"), url("./../fonts/CenturyGothic-Bold.woff") format("woff"), url("./../fonts/CenturyGothic-Bold.ttf") format("truetype"), url("./../fonts/CenturyGothic-Bold.svg#CenturyGothic-Bold") format("svg");
+  font-display: fallback;
   font-weight: normal;
   font-style: normal; }
 
-[class^="icon-"], [class*=" icon-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
+@font-face {
+  font-family: "CenturyGothic";
+  src: url("./../fonts/CenturyGothic.eot?#iefix") format("embedded-opentype"), url("./../fonts/CenturyGothic.woff2") format("woff2"), url("./../fonts/CenturyGothic.woff") format("woff"), url("./../fonts/CenturyGothic.ttf") format("truetype"), url("./../fonts/CenturyGothic.svg#CenturyGothic") format("svg");
+  font-display: fallback;
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Frankfurter";
+  src: url("./../fonts/FrankfurterMediumStd.eot?#iefix") format("embedded-opentype"), url("./../fonts/FrankfurterMediumStd.woff2") format("woff2"), url("./../fonts/FrankfurterMediumStd.woff") format("woff"), url("./../fonts/FrankfurterMediumStd.ttf") format("truetype"), url("./../fonts/FrankfurterMediumStd.svg#Frankfurter") format("svg");
+  font-display: fallback;
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'icomoon';
+  src: url("./../fonts/icomoon.eot?4h7edh");
+  src: url("./../fonts/icomoon.eot?4h7edh#iefix") format("embedded-opentype"), url("./../fonts/icomoon.ttf?4h7edh") format("truetype"), url("./../fonts/icomoon.woff?4h7edh") format("woff"), url("./../fonts/icomoon.svg?4h7edh#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block; }
+
+[class^="icon-"],
+[class*=" icon-"] {
   font-family: 'icomoon' !important;
   speak: none;
   font-style: normal;
@@ -10687,247 +10711,99 @@ a.text-dark:hover, a.text-dark:focus {
   font-variant: normal;
   text-transform: none;
   line-height: 1;
-  /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
-.icon-eje:before {
-  content: "\e927"; }
-
-.icon-marca:before {
-  content: "\e92f"; }
-
-.icon-rodante .path1:before {
-  content: "\e930";
-  font-style: normal;
-  color: black; }
-
-.icon-rodante .path2:before {
-  content: "\e931";
-  font-style: normal;
-  margin-left: -1em;
-  color: black; }
-
-.icon-rodante .path3:before {
-  content: "\e932";
-  font-style: normal;
-  margin-left: -1em;
-  color: black; }
-
-.icon-rodante .path4:before {
-  content: "\e933";
-  font-style: normal;
-  margin-left: -1em;
-  color: white; }
-
-.icon-rodante .path5:before {
-  content: "\e934";
-  font-style: normal;
-  margin-left: -1em;
-  color: white; }
-
-.icon-rodante .path6:before {
-  content: "\e935";
-  font-style: normal;
-  margin-left: -1em;
-  color: black; }
-
-.icon-rodante .path7:before {
-  content: "\e936";
-  font-style: normal;
-  margin-left: -1em;
-  color: black; }
-
-.icon-rodante .path8:before {
-  content: "\e937";
-  font-style: normal;
-  margin-left: -1em;
-  color: black; }
-
-.icon-rodante .path9:before {
-  content: "\e938";
-  font-style: normal;
-  margin-left: -1em;
-  color: black; }
-
-.icon-rodante .path10:before {
-  content: "\e939";
-  font-style: normal;
-  margin-left: -1em;
-  color: black; }
-
-.icon-anio:before {
-  content: "\e921"; }
-
-.icon-asientos:before {
-  content: "\e922"; }
-
-.icon-carroceria:before {
-  content: "\e923"; }
-
-.icon-cilindros:before {
-  content: "\e924"; }
-
-.icon-color:before {
-  content: "\e925"; }
-
-.icon-combustible:before {
-  content: "\e926"; }
-
-.icon-kilometraje:before {
-  content: "\e928"; }
-
-.icon-motor:before {
-  content: "\e929"; }
-
-.icon-pasajeros:before {
-  content: "\e92a"; }
-
-.icon-potencia:before {
-  content: "\e92b"; }
-
-.icon-ruedas:before {
-  content: "\e92c"; }
-
-.icon-serie:before {
-  content: "\e92d"; }
-
-.icon-version:before {
-  content: "\e92e"; }
-
-.icon-modelo:before {
-  content: "\e920"; }
-
-.icon-location:before {
-  content: "\e91f"; }
-
-.icon-spin-alt:before {
-  content: "\e913"; }
-
-.icon-phone:before {
-  content: "\e91d"; }
-
-.icon-envelope-o:before {
-  content: "\e91e"; }
-
-.icon-whatsapp:before {
-  content: "\e91c"; }
-
-.icon-home:before {
-  content: "\e91a"; }
-
-.icon-circle:before {
-  content: "\e919"; }
-
-.icon-close:before {
-  content: "\e916"; }
-
-.icon-bars:before {
-  content: "\e914"; }
-
-.icon-youtube-play:before {
-  content: "\e912"; }
-
-.icon-instagram:before {
+.icon-social-twitter::before {
   content: "\e900"; }
 
-.icon-twitter:before {
+.icon-social-facebook::before {
   content: "\e901"; }
 
-.icon-google-plus:before {
+.icon-keyboard_arrow_up::before {
   content: "\e902"; }
 
-.icon-facebook:before {
+.icon-keyboard_arrow_right::before {
   content: "\e903"; }
 
-.icon-facebook-f:before {
-  content: "\e903"; }
-
-.icon-check:before {
-  content: "\e91b"; }
-
-.icon-minus:before {
-  content: "\e918"; }
-
-.icon-plus:before {
-  content: "\e917"; }
-
-.icon-search:before {
-  content: "\e915"; }
-
-.icon-subdirectory_arrow_right:before {
+.icon-keyboard_arrow_left::before {
   content: "\e904"; }
 
-.icon-subdirectory_arrow_left:before {
+.icon-keyboard_arrow_down::before {
   content: "\e905"; }
 
-.icon-keyboard_arrow_up:before {
+.icon-arrow_upward::before {
   content: "\e906"; }
 
-.icon-keyboard_arrow_right:before {
+.icon-arrow_forward::before {
   content: "\e907"; }
 
-.icon-keyboard_arrow_left:before {
+.icon-arrow_drop_up::before {
   content: "\e908"; }
 
-.icon-keyboard_arrow_down:before {
+.icon-arrow_drop_down::before {
   content: "\e909"; }
 
-.icon-arrow_upward:before {
+.icon-arrow_downward::before {
   content: "\e90a"; }
 
-.icon-arrow_forward:before {
+.icon-arrow_back::before {
   content: "\e90b"; }
 
-.icon-arrow_drop_up:before {
+.icon-refresh::before {
   content: "\e90c"; }
 
-.icon-arrow_drop_down:before {
-  content: "\e90d"; }
+.icon-sync::before {
+  content: "\e90c"; }
 
-.icon-arrow_downward:before {
-  content: "\e90e"; }
+.icon-reload::before {
+  content: "\e90c"; }
 
-.icon-arrow_back:before {
-  content: "\e90f"; }
+.icon-loading::before {
+  content: "\e90c"; }
 
-.icon-settings:before {
+.icon-youtube-play::before {
   content: "\e910"; }
 
-.icon-person_outline:before {
-  content: "\e911"; }
+.icon-instagram::before {
+  content: "\e90d"; }
 
-:root {
-  --top-sidebar: 0;
-  --body-ov: 'auto'; }
+.icon-user-circle-o::before {
+  content: "\e90e"; }
+
+.icon-user-circle::before {
+  content: "\e90f"; }
 
 body {
-  background-color: #ffffff;
-  color: #5e5e5e;
-  font-family: "Muli", sans-serif;
+  background-color: #fff;
+  color: #222;
+  font-family: "CenturyGothic", sans-serif;
   font-size: 16px;
-  overflow: var(--body-ov);
   position: relative; }
 
 a {
   color: #579bcb;
-  -webkit-transition: color .3s ease-in-out;
-  transition: color .3s ease-in-out; }
+  -webkit-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out; }
   a:hover {
-    color: #5ac8fa;
+    color: #007eff;
     text-decoration: none; }
 
 hr {
-  background-color: #eeeeee; }
+  background-color: #eee; }
+
+@media screen and (min-width: 1400px) {
+  .container {
+    max-width: 80%; } }
 
 .text-white {
   color: white; }
 
 .text-firstColor {
-  color: #579bcb; }
+  color: #3678e5; }
 
 .text-secondColor {
-  color: #03599f; }
+  color: #fc9f26; }
 
 .text-light {
   font-weight: 300; }
@@ -10936,7 +10812,7 @@ hr {
   font-weight: 700; }
 
 .ArrowTop {
-  background-color: #03599f;
+  background-color: #fc9f26;
   border: none;
   border-radius: 50%;
   bottom: 15px;
@@ -10949,5 +10825,261 @@ hr {
   position: fixed;
   right: 15px;
   z-index: 9; }
+
+.Header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 99; }
+
+.Header__top {
+  background-color: rgba(34, 34, 34, 0.6);
+  padding: 0.5rem 0; }
+
+.Header__top__title {
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.75rem;
+  margin-bottom: 0;
+  text-transform: uppercase; }
+
+.Header__main {
+  background-color: rgba(34, 34, 34, 0.5);
+  padding: 0.6rem 0; }
+
+.Header__logo {
+  margin-bottom: 0; }
+
+.Header__nav {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.Header__mainMenu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 0;
+  padding-left: 0; }
+  .Header__mainMenu li {
+    list-style: none;
+    font-family: "CenturyGothic-Bold", sans-serif;
+    font-size: 0.75rem;
+    margin: 0 1.5rem;
+    text-transform: uppercase; }
+    .Header__mainMenu li a {
+      color: white; }
+    .Header__mainMenu li.current-menu-item a, .Header__mainMenu li.current_page_item a {
+      color: #fc9f26; }
+
+.Button {
+  border-radius: 0.3rem;
+  display: inline-block;
+  font-family: "CenturyGothic-Bold", sans-serif;
+  font-size: 1rem;
+  padding: 0.75rem 1.5rem;
+  text-align: center;
+  -webkit-transition: background-color 0.3s ease-out;
+  transition: background-color 0.3s ease-out; }
+  .Button--icon {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+    .Button--icon i[class^=icon-] {
+      font-size: 1.5rem;
+      margin-right: 0.5rem; }
+  .Button--full {
+    width: 100%; }
+  .Button--outline {
+    background-color: transparent;
+    border-style: solid;
+    border-width: 2px; }
+    .Button--outline--light {
+      border-color: white;
+      color: white; }
+      .Button--outline--light:focus, .Button--outline--light:hover {
+        border-color: #579bcb;
+        color: #579bcb; }
+    .Button--outline--accent {
+      border-color: #2352ff; }
+      .Button--outline--accent:focus, .Button--outline--accent:hover {
+        border-color: #579bcb; }
+  .Button--first {
+    background-color: #3678e5;
+    color: white; }
+    .Button--first:focus, .Button--first:hover {
+      background-color: #579bcb;
+      color: white; }
+  .Button--second {
+    background-color: #fc9f26;
+    color: white; }
+    .Button--second:focus, .Button--second:hover {
+      background-color: #fe5a1a; }
+  .Button--secondAlt {
+    background-color: #fe5a1a;
+    color: white; }
+    .Button--secondAlt:focus, .Button--secondAlt:hover {
+      background-color: #fc9f26; }
+  .Button--accent {
+    background-color: #2352ff;
+    color: white; }
+    .Button--accent:focus, .Button--accent:hover {
+      background-color: #007eff; }
+
+.Carousel .carousel-indicators li {
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 50%;
+  height: 10px;
+  width: 10px; }
+  .Carousel .carousel-indicators li.active {
+    background-color: white; }
+
+.Carousel .carousel-control-prev,
+.Carousel .carousel-control-next {
+  width: 10%; }
+
+.Carousel .carousel-caption {
+  -ms-flex-line-pack: center;
+  align-content: center;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  left: 10%;
+  padding: 0;
+  right: auto;
+  text-align: left;
+  top: 0; }
+  .Carousel .carousel-caption .Carousel__caption__subtitle {
+    color: white;
+    font-size: 1.125rem;
+    text-transform: uppercase;
+    width: 100%; }
+  .Carousel .carousel-caption .Carousel__caption__title {
+    color: white;
+    font-family: "Frankfurter", sans-serif;
+    font-size: 3rem;
+    text-transform: uppercase;
+    width: 100%; }
+  .Carousel .carousel-caption p {
+    width: 100%; }
+
+.Prefooter {
+  background-color: #222;
+  padding: 2rem 0; }
+
+.Prefooter__logo {
+  margin-bottom: 2rem; }
+
+.Prefooter__info {
+  list-style: none;
+  padding-left: 0; }
+  .Prefooter__info li {
+    color: #777;
+    font-family: "Muli", sans-serif;
+    margin-bottom: 1rem; }
+
+.Prefooter__title {
+  color: white;
+  font-family: "Muli", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem; }
+
+.Prefooter__social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  padding-left: 0; }
+  .Prefooter__social li {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: #333;
+    border-radius: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 50px;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-right: 1.5rem;
+    -webkit-transition: background-color 0.4s ease-out;
+    transition: background-color 0.4s ease-out;
+    width: 50px; }
+    .Prefooter__social li a {
+      color: white;
+      font-size: 1.5rem;
+      display: block; }
+      .Prefooter__social li a:focus {
+        color: #fe5a1a; }
+    .Prefooter__social li:hover {
+      background-color: white; }
+      .Prefooter__social li:hover a {
+        color: #fe5a1a; }
+
+.Prefooter__text {
+  color: #777; }
+
+.Footer {
+  background-color: #2e2e2e;
+  padding: 1rem 0; }
+
+.Footer__copy {
+  color: #777;
+  font-size: 0.75rem;
+  margin-bottom: 0; }
+
+.Form--inline .form-control {
+  height: calc(1.5em + 0.75rem + 6px); }
+
+.Form--inline .input-group > .form-control:not(:last-child) {
+  border-radius: 0;
+  font-family: "Muli", sans-serif; }
+  .Form--inline .input-group > .form-control:not(:last-child)::-webkit-input-placeholder {
+    color: #777;
+    font-family: "Muli", sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700; }
+  .Form--inline .input-group > .form-control:not(:last-child)::-moz-placeholder {
+    color: #777;
+    font-family: "Muli", sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700; }
+  .Form--inline .input-group > .form-control:not(:last-child):-ms-input-placeholder {
+    color: #777;
+    font-family: "Muli", sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700; }
+  .Form--inline .input-group > .form-control:not(:last-child):-moz-placeholder {
+    color: #777;
+    font-family: "Muli", sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700; }
+
+.Form--inline .input-group > .input-group-append > .btn {
+  background-color: #579bcb;
+  border-radius: 0;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.375rem 1.5rem; }
+  .Form--inline .input-group > .input-group-append > .btn:focus, .Form--inline .input-group > .input-group-append > .btn:hover {
+    background-color: #3678e5; }
 
 /*# sourceMappingURL=maps/style.css.map */

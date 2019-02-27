@@ -4,13 +4,17 @@
 //  Animate
 @import "./../../node_modules/animate.css/animate";
 
+// Bourbon
+@import "./../../node_modules/bourbon/core/bourbon";
+
 @import "vars";
 @import "fonts";
 @import "general";
-//@import "forms";
-//@import "buttons";
-// @import "header";
-// @import "footer";
+@import "header";
+@import "buttons";
+@import "carousel";
+@import "footer";
+@import "forms";
 // @import "panel";
 // @import "main";
 // @import "cards";
@@ -19,4 +23,3 @@
 // @import "single";
 // @import "tabs";
 // @import "bxSlider";
-// @import "slider";

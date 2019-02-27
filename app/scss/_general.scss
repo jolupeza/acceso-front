@@ -1,26 +1,25 @@
-:root {
-  --top-sidebar: 0;
-  --body-ov: 'auto';
-}
-
 body {
   background-color: $bodyColor;
   color: $textColor;
   font-family: $body-font;
   font-size: 16px;
-  overflow: var(--body-ov);
   position: relative;
 }
 a {
-  color: $firstColor;
-  transition: color .3s ease-in-out;
+  color: $firstColorAlt;
+  transition: color 0.3s ease-in-out;
   &:hover {
-    color: $firstColorAlt;
+    color: $accentColorAlt;
     text-decoration: none;
   }
 }
 hr {
   background-color: $borderColor;
+}
+.container {
+  @media screen and (min-width: 1400px) {
+    max-width: 80%;
+  }
 }
 .text-white {
   color: white;
@@ -42,7 +41,7 @@ hr {
   border: none;
   border-radius: 50%;
   bottom: 15px;
-  box-shadow: 1px 1px 3px rgba(black, .5);
+  box-shadow: 1px 1px 3px rgba(black, 0.5);
   color: white;
   cursor: pointer;
   display: none;

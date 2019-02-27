@@ -3,273 +3,130 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Autoclass</title>
+  <title>Acceso Crédito Vehicular</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
   <header class="Header">
-    <div class="container-fluid">
-      <div class="row align-items-center">
-        <div class="col-6">
-          <h1 class="Header__logo">
-            <a href="#">
-              <img src="images/logo.png" alt="Autoclass" class="img-fluid" />
-            </a>
-          </h1>
+    <aside class="Header__top">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <h5 class="Header__top__title">Central: (01) 605-5555</h5>
+          </div>
         </div>
-        <div class="col-6">
-          <h2 class="Header__sponsor">
-            <img src="images/acceso-logo.png" alt="Acceso" class="img-fluid" />
-          </h2>
+      </div>
+    </aside>
+    <div class="Header__main">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-2">
+            <h1 class="Header__logo">
+              <a href="index.html" class="d-block" title="Acceso Crédito Vehicular">
+                <img src="images/logo_acceso.png" alt="Acceso Crédito Vehicular" class="img-fluid">
+              </a>
+            </h1>
+          </div>
+          <div class="col-lg-8">
+            <nav class="Header__nav">
+              <ul class="Header__mainMenu">
+                <li><a href="">Productos</a></li>
+                <li><a href="">¿Qué necesitas?</a></li>
+                <li><a href="">Novedades</a></li>
+                <li><a href="">Sobre Acceso</a></li>
+                <li><a href="">Contáctanos</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="col-lg-2 text-right">
+            <a href="#" class="Button Button--outline Button--outline--light Button--icon text-uppercase"><i class="icon-user-circle"></i> Cliente Acceso</a>
+          </div>
         </div>
       </div>
     </div>
   </header>
-  <nav class="Header__menuMovil d-lg-none">
-    <nav class="Header__account">
-      <ul class="Header__accountMenu">
-        <li>
-          <a href="index.html">
-            <i class="icon-home"></i>
-          </a>
-        </li>
-        <li id="js-toggle-search">
-          <a href=""><i class="icon-search"></i></a>
-        </li>
-        <!-- <li><a href=""><i class="icon-person_outline"></i></a></li>
-        <li><a href=""><i class="icon-settings"></i></a></li> -->
-      </ul>
-    </nav>
-  </nav>
 
-  <aside class="Sidebar">
-    <nav class="Header__menu">
-      <ul class="Header__mainMenu">
-        <li class="current-menu-item current_page_item"><a href="">Home</a></li>
-        <li><a href="">Marcas</a></li>
-        <li><a href="">Ayuda</a></li>
-        <li><a href="">Contacto</a></li>
-      </ul>
-    </nav>
-  </aside>
-
-  <div id="carouselHome" class="carousel slide Carousel" data-ride="carousel">
+  <div id="carouselHome" class="carousel slide carousel-fade Carousel" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselHome" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselHome" data-slide-to="1"></li>
+    </ol>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <a href="#" class="d-block" target="_blank" rel="noopener noreferrer"><img class="img-fluid" src="https://picsum.photos/1920/700" alt="First slide"></a>
+        <img class="d-block w-100" src="images/slider.png" alt="First slide" />
       </div>
       <div class="carousel-item">
-        <a href="#" class="d-block" target="_blank" rel="noopener noreferrer"><img class="img-fluid" src="https://picsum.photos/1920/700" alt="Second slide"></a>
-      </div>
-      <div class="carousel-item">
-        <a href="#" class="d-block" target="_blank" rel="noopener noreferrer"><img class="img-fluid" src="https://picsum.photos/1920/700" alt="Third slide"></a>
+        <img class="d-block w-100" src="images/slider1.png" alt="Second slide" />
+        <div class="carousel-caption">
+          <h5 class="Carousel__caption__subtitle">Financiamos</h5>
+          <h4 class="Carousel__caption__title">El auto de tus sueños</h4>
+          <p>Te damos el préstamo vehicular que estás buscando</p>
+          <a href="#" class="Button Button--second text-uppercase">Quiero mi préstamos</a>
+        </div>
       </div>
     </div>
     <a class="carousel-control-prev" href="#carouselHome" role="button" data-slide="prev">
-      <i class="icon-keyboard_arrow_left"></i>
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
     </a>
     <a class="carousel-control-next" href="#carouselHome" role="button" data-slide="next">
-      <i class="icon-keyboard_arrow_right"></i>
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
     </a>
   </div>
 
-  <section class="Panel Panel--small Panel--gray mb-5" id="js-search">
-    <h2 class="Panel__title text-secondColor text-center">Encuentra el auto que buscas</h2>
-    <form class="Form Form--inline form-inline">
-      <label class="sr-only" for="brand">Marca</label>
-      <select class="custom-select mr-lg-5" id="brand">
-        <option selected>Marca</option>
-        <option value="1">Marca One</option>
-        <option value="2">Marca Two</option>
-        <option value="3">Marca Three</option>
-      </select>
-
-      <label class="sr-only" for="model">Modelo</label>
-      <select class="custom-select mr-lg-5" id="model">
-        <option selected>Modelo</option>
-        <option value="1">Modelo One</option>
-        <option value="2">Modelo Two</option>
-        <option value="3">Modelo Three</option>
-      </select>
-
-      <label class="sr-only" for="fee">Cuotas desde</label>
-      <input type="text" class="form-control mr-lg-5" id="fee" placeholder="Cuotas desde">
-
-      <button type="submit" class="btn Button Button--accent">Buscar</button>
-    </form>
-  </section>
-
-  <div class="container-fluid">
-    <main class="Main">
-      <nav class="Main__filters">
-        <ul class="Main__menuFilters">
-          <li class="active"><a href="#">Nuevo</a></li>
-          <li><a href="#">Seminuevo</a></li>
-          <li><a href="#">Populares</a></li>
-        </ul>
-        <ul class="Main__navigationFilters">
-          <li><a href="#"><i class="icon-keyboard_arrow_left"></i></a></li>
-          <li><a href="#"><i class="icon-keyboard_arrow_right"></i></a></li>
-        </ul>
-      </nav>
-
-      <section class="Cards">
-        <article class="Cards__item">
-          <figure class="Cards__figure">
-            <a href="" class="d-block"><img src="images/auto.png" alt="Toyota Runner 4xfs" class="img-fluid" /></a>
-            <aside class="Cards__badge Cards__badge--nuevo">Nuevo</aside>
-          </figure>
-          <div class="Cards__info">
-            <h2 class="Cards__title">Toyota Runner 4xfs</h2>
-            <!-- <p class="Cards__text">Cuota inicial desde: <strong>S/. 500.00</strong></p> -->
-            <h4 class="Cards__subtitle">Cuota mensual desde:</h4>
-            <h3 class="Cards__resalt">S/ 79.99</h3>
-            <div class="Cards__button">
-              <a href="single.html" class="btn Button Button--outline Button--outline--accent">¡Cotiza ahora!</a>
-            </div>
-          </div>
-        </article>
-        <article class="Cards__item">
-          <figure class="Cards__figure Cards__figure--sold">
-            <a href="" class="d-block"><img src="images/auto.png" alt="Toyota Runner 4xfs" class="img-fluid" /></a>
-            <aside class="Cards__badge Cards__badge--seminuevo">Seminuevo</aside>
-          </figure>
-          <div class="Cards__info">
-            <h2 class="Cards__title">Volkswagen Gold Sedan Voyage</h2>
-            <!-- <p class="Cards__text">Cuota inicial desde: <strong>S/. 500.00</strong></p> -->
-            <h4 class="Cards__subtitle">Cuota mensual desde:</h4>
-            <h3 class="Cards__resalt">S/ 79.99</h3>
-            <div class="Cards__button">
-              <a href="single.html" class="btn Button Button--outline Button--outline--accent">¡Cotiza ahora!</a>
-            </div>
-          </div>
-        </article>
-        <article class="Cards__item">
-          <figure class="Cards__figure">
-            <a href="" class="d-block"><img src="images/auto.png" alt="Toyota Runner 4xfs" class="img-fluid" /></a>
-            <aside class="Cards__badge Cards__badge--populares">Populares</aside>
-          </figure>
-          <div class="Cards__info">
-            <h2 class="Cards__title">Gold Sedan Voyage Concept</h2>
-            <!-- <p class="Cards__text">Cuota inicial desde: <strong>S/. 500.00</strong></p> -->
-            <h4 class="Cards__subtitle">Cuota mensual desde:</h4>
-            <h3 class="Cards__resalt">S/ 79.99</h3>
-            <div class="Cards__button">
-              <a href="single.html" class="btn Button Button--outline Button--outline--accent">¡Cotiza ahora!</a>
-            </div>
-          </div>
-        </article>
-        <article class="Cards__item">
-          <figure class="Cards__figure">
-            <a href="" class="d-block"><img src="images/auto.png" alt="Toyota Runner 4xfs" class="img-fluid" /></a>
-            <aside class="Cards__badge Cards__badge--nuevo">Nuevo</aside>
-          </figure>
-          <div class="Cards__info">
-            <h2 class="Cards__title">Toyota Runner 4xfs</h2>
-            <!-- <p class="Cards__text">Cuota inicial desde: <strong>S/. 500.00</strong></p> -->
-            <h4 class="Cards__subtitle">Cuota mensual desde:</h4>
-            <h3 class="Cards__resalt">S/ 79.99</h3>
-            <div class="Cards__button">
-              <a href="single.html" class="btn Button Button--outline Button--outline--accent">¡Cotiza ahora!</a>
-            </div>
-          </div>
-        </article>
-        <article class="Cards__item">
-          <figure class="Cards__figure">
-            <a href="" class="d-block"><img src="images/auto.png" alt="Toyota Runner 4xfs" class="img-fluid" /></a>
-            <aside class="Cards__badge Cards__badge--nuevo">Nuevo</aside>
-          </figure>
-          <div class="Cards__info">
-            <h2 class="Cards__title">Toyota Runner 4xfs</h2>
-            <!-- <p class="Cards__text">Cuota inicial desde: <strong>S/. 500.00</strong></p> -->
-            <h4 class="Cards__subtitle">Cuota mensual desde:</h4>
-            <h3 class="Cards__resalt">S/ 79.99</h3>
-            <div class="Cards__button">
-              <a href="single.html" class="btn Button Button--outline Button--outline--accent">¡Cotiza ahora!</a>
-            </div>
-          </div>
-        </article>
-      </section>
-      <div class="alert alert-danger text-center" role="alert">
-        No se encontraron autos!!!
-      </div>
-
-      <aside class="Cards__loading d-none">
-        <i class="icon-spin-alt icon-check d-inline-block animated infinite rotateIn"></i>
-      </aside>
-    </main>
-  </div>
-
-  <section class="Panel Panel--second">
-    <div class="container-fluid">
+  <aside class="Prefooter">
+    <div class="container">
       <div class="row">
-        <div class="col">
-          <h3 class="Panel__subtitle text-center">¿Quiéres encontrar el carro que se adapta a tu presupuesto?</h3>
-          <h2 class="Panel__title text-bold text-center text-uppercase">Completa el formulario y encuentra tu ideal</h2>
-          <div class="text-center">
-            <a href="#" class="btn Button Button--outline Button--outline--light">¡Cotiza ahora!</a></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="Prefooter">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-lg-3">
-          <h3 class="Prefooter__logo">
-            <img src="images/logo-footer.png" alt="Autoclass" class="img-fluid" >
-          </h3>
+        <div class="col-lg-4">
+          <h2 class="Prefooter__logo">
+            <a href="#" class="d-block" title="Acceso Crédito Vehicular">
+              <img src="images/logo_footer.png" alt="Acceso Crédito Vehicular" class="img-fluid" />
+            </a>
+          </h2>
           <ul class="Prefooter__info">
-            <li><i class="icon-location"></i> 123 Lima, Perú</li>
-            <li><i class="icon-phone"></i> +51 123 456 789 / 01 123 456</li>
-            <li><i class="icon-whatsapp"></i> 9999999999</li>
-            <li><i class="icon-envelope-o"></i> <a href="#"> info@midomain.com</a></li>
-          </ul>
-        </div>
-        <div class="col-md-6 col-lg-2">
-          <h3 class="Prefooter__title">Información</h3>
-          <ul class="Prefooter__menu">
-            <li class="current-menu-item current_page_item"><a href="">Inicio</a></li>
-            <li><a href="">Solo hoy!</a></li>
-            <li><a href="">Marcas</a></li>
-            <li><a href="">Ayuda</a></li>
-            <li><a href="">Contacto</a></li>
-          </ul>
-        </div>
-        <div class="col-md-6 col-lg-3">
-          <h3 class="Prefooter__title">Síganos en Redes Sociales</h3>
-          <ul class="Prefooter__social">
-            <li class="active"><a href="#"><i class="icon-facebook"></i></a></li>
-            <li><a href="#"><i class="icon-google-plus"></i></a></li>
-            <li><a href="#"><i class="icon-twitter"></i></a></li>
-            <li><a href="#"><i class="icon-instagram"></i></a></li>
-            <li><a href="#"><i class="icon-youtube-play"></i></a></li>
+            <li>Dirección: 123 Lima, Perú</li>
+            <li>Teléfono: +51 123 456 789 / 01 123 456</li>
+            <li>E-mail: <a href="mailto:info@midomain.com">info@acceso.com.pe</a></li>
           </ul>
         </div>
         <div class="col-lg-4">
-          <h3 class="Prefooter__title">Suscríbase a nuestras noticias</h3>
-          <p>Ingrese su e-mail y le estaremos avisando de nuestras ofertas especiales, no deje de enterarse de todos nuestros descuentos.</p>
-          <form class="Form Form--group mt-5" action="">
-            <div class="input-group">
-              <input type="email" class="form-control" placeholder="Ingrese su e-mail" aria-describedby="button-addon1">
+          <h4 class="Prefooter__title">Síganos en Redes Sociales</h4>
+          <ul class="Prefooter__social">
+            <li><a href="#" rel="noopener noreferrer" target="_blank" title="Síguenos en Facebook"><i class="icon-social-facebook"></i></a></li>
+            <li><a href="#" rel="noopener noreferrer" target="_blank" title="Síguenos en Twitter"><i class="icon-social-twitter"></i></a></li>
+            <li><a href="#" rel="noopener noreferrer" target="_blank" title="Síguenos en Instagram"><i class="icon-instagram"></i></a></li>
+            <li><a href="#" rel="noopener noreferrer" target="_blank" title="Síguenos en Youtube"><i class="icon-youtube-play"></i></a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4">
+          <h4 class="Prefooter__title">Suscríbase a nuestras noticias</h4>
+          <p class="Prefooter__text">Ingrese su e-mail y le estaremos avisando de nuestras ofertas especiales, no deje de enterarse de todos nuestros descuentos.</p>
+
+          <form action="" class="Form Form--inline">
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" placeholder="Ingrese su e-mail" aria-label="Ingrese su e-mail" aria-describedby="btn-newsletter">
               <div class="input-group-append">
-                <button class="btn" type="button" id="button-addon1">Suscríbeme!</button>
+                <button class="btn" type="submit" id="btn-newsletter">Subscribe!</button>
               </div>
             </div>
           </form>
         </div>
       </div>
     </div>
-  </section>
-
+  </aside>
   <footer class="Footer">
-    <div class="container-fluid">
-      <p class="Footer__text">&copy; 2018. Todos los derechos reservados.</p>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <p class="Footer__copy">&copy; 2018. Todos los derechos reservados.</p>
+        </div>
+      </div>
     </div>
   </footer>
 
-  <button class="ArrowTop"><i class="icon-keyboard_arrow_up"></i></button>
+
+  <!-- <button class="ArrowTop"><i class="icon-keyboard_arrow_up"></i></button> -->
 
   <script type="text/javascript" src="js/min/bundle.js"></script>
   <script type="text/javascript" src="js/min/script.js"></script>

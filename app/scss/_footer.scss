@@ -1,105 +1,65 @@
-.Footer {
-  background-color: $darkColorAlt;
-  padding: 2rem 0;
-}
-.Footer__text {
-  font-size: .75rem;
-  margin-bottom: 0;
-}
 .Prefooter {
   background-color: $darkColor;
-  padding: 4rem 0;
+  padding: 2rem 0;
 }
 .Prefooter__logo {
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 .Prefooter__info {
-  margin-bottom: 0;
+  list-style: none;
   padding-left: 0;
   li {
-    align-items: center;
-    display: flex;
-    list-style: none;
-    font-size: .875rem;
-    margin-bottom: .8rem;
-    [class^="icon-"] {
-      font-size: 1.75rem;
-      margin-right: 1rem;
-    }
+    color: $thirdColor;
+    font-family: $muli-font;
+    margin-bottom: 1rem;
   }
 }
 .Prefooter__title {
   color: white;
-  font-size: 1.125rem;
-  margin-bottom: 2rem;
-  @media screen and (max-width: 991px) {
-    margin-top: 2.5rem;
-  }
-}
-.Prefooter__menu {
-  margin-bottom: 0;
-  padding-left: 0;
-  li {
-    font-size: .875rem;
-    margin-bottom: .8rem;
-    list-style: none;
-    &.current-menu-item, &.current_page_item {
-      a {
-        color: white;
-      }
-    }
-    a {
-      &:focus, &:hover {
-        color: white;
-      }
-    }
-  }
+  font-family: $muli-font;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
 }
 .Prefooter__social {
   display: flex;
-  margin-bottom: 0;
+  list-style: none;
   padding-left: 0;
   li {
     align-items: center;
-    background-color: $accentColorAlt;
+    background-color: $thirdColorAlt;
     border-radius: 50%;
     display: flex;
-    font-size: 1.5rem;
-    height: 60px;
+    height: 50px;
     justify-content: center;
-    list-style: none;
-    margin-right: 1rem;
-    width: 60px;
-    &:last-child {
-      margin-right: 0;
-    }
-    &.active, &:focus, &:hover {
-      background-color: white;
-      a {
-        color: $thirdColor;
-      }
-    }
+    margin-right: 1.5rem;
+    transition: background-color 0.4s ease-out;
+    width: 50px;
     a {
       color: white;
-      display: block;
-    }
-    @media screen and (max-width: 1400px) {
-      height: 50px;
-      width: 50px;
-    }
-    @media screen and (max-width: 1200px) {
-      font-size: 1rem;
-      height: 40px;
-      width: 40px;
-    }
-    @media screen and (max-width: 991px) {
       font-size: 1.5rem;
-      height: 60px;
-      width: 60px;
+      display: block;
+      &:focus {
+        color: $secondColorAlt;
+      }
     }
-    @media screen and (max-width: 767px) {
-      height: 50px;
-      width: 50px;
+    &:hover {
+      background-color: white;
+      a {
+        color: $secondColorAlt;
+      }
     }
   }
+}
+.Prefooter__text {
+  color: $thirdColor;
+}
+.Footer {
+  background-color: $darkColorAlt;
+  padding: 1rem 0;
+}
+.Footer__copy {
+  color: $thirdColor;
+  font-size: 0.75rem;
+  margin-bottom: 0;
 }
