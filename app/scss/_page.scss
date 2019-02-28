@@ -5,15 +5,6 @@
   position: relative;
   z-index: 9;
 }
-.Page {
-  padding: 3rem 0;
-  &--alt {
-    background-color: $bodyColorAlt;
-    .Page__wrapper {
-      background-color: $bodyColorAlt;
-    }
-  }
-}
 .Page__subtitle {
   color: $firstColor;
   font-family: $frankfurter-font;
@@ -22,4 +13,61 @@
 .Page__title {
   color: $headingColor;
   font-size: 2rem;
+}
+.Page__item__title {
+  color: $headingColor;
+  font-family: $frankfurter-font;
+  font-size: 2.25rem;
+  text-transform: uppercase;
+  &__first {
+    color: $firstColor;
+  }
+  &__second {
+    color: $secondColor;
+  }
+}
+.Page__item__caption {
+  align-content: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  width: 60%;
+  .Page__subtitle,
+  .Page__item__title,
+  .Page__item__text {
+    width: 100%;
+  }
+}
+.Page {
+  padding: 3rem 0;
+  &--alt {
+    background-color: $bodyColorAlt;
+    .Page__wrapper {
+      background-color: $bodyColorAlt;
+    }
+  }
+  &--full {
+    padding: 0;
+  }
+  &--50 {
+    display: flex;
+    .Page__item {
+      display: flex;
+      padding: 5rem;
+      width: 50%;
+      &:first-child {
+        padding-left: 5%;
+      }
+      &:last-child {
+        background-color: $fourthColor;
+        justify-content: flex-end;
+        padding-right: 5%;
+        .Page__item__caption {
+          text-align: right;
+          .Button {
+            margin: 0 0 0 auto;
+          }
+        }
+      }
+    }
+  }
 }

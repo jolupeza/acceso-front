@@ -85,7 +85,6 @@ abbr[data-original-title] {
   text-decoration: underline dotted;
   cursor: help;
   border-bottom: 0;
-  -webkit-text-decoration-skip-ink: none;
   text-decoration-skip-ink: none; }
 
 address {
@@ -10856,7 +10855,10 @@ hr {
   align-items: center;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
 
 .Header__mainMenu {
   display: -webkit-box;
@@ -11092,21 +11094,69 @@ hr {
   position: relative;
   z-index: 9; }
 
-.Page {
-  padding: 3rem 0; }
-  .Page--alt {
-    background-color: #f8f8f8; }
-    .Page--alt .Page__wrapper {
-      background-color: #f8f8f8; }
-
 .Page__subtitle {
   color: #3678e5;
   font-family: "Frankfurter", sans-serif;
   font-size: 0.875rem; }
 
 .Page__title {
-  color: #222;
+  color: #444;
   font-size: 2rem; }
+
+.Page__item__title {
+  color: #444;
+  font-family: "Frankfurter", sans-serif;
+  font-size: 2.25rem;
+  text-transform: uppercase; }
+  .Page__item__title__first {
+    color: #3678e5; }
+  .Page__item__title__second {
+    color: #fc9f26; }
+
+.Page__item__caption {
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  width: 60%; }
+  .Page__item__caption .Page__subtitle,
+  .Page__item__caption .Page__item__title,
+  .Page__item__caption .Page__item__text {
+    width: 100%; }
+
+.Page {
+  padding: 3rem 0; }
+  .Page--alt {
+    background-color: #f8f8f8; }
+    .Page--alt .Page__wrapper {
+      background-color: #f8f8f8; }
+  .Page--full {
+    padding: 0; }
+  .Page--50 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .Page--50 .Page__item {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      padding: 5rem;
+      width: 50%; }
+      .Page--50 .Page__item:first-child {
+        padding-left: 5%; }
+      .Page--50 .Page__item:last-child {
+        background-color: #fdf0df;
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
+        justify-content: flex-end;
+        padding-right: 5%; }
+        .Page--50 .Page__item:last-child .Page__item__caption {
+          text-align: right; }
+          .Page--50 .Page__item:last-child .Page__item__caption .Button {
+            margin: 0 0 0 auto; }
 
 .Tabs {
   margin: 3rem 0; }
