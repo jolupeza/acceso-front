@@ -1,0 +1,25 @@
+.Page__wrapper {
+  border-radius: 1rem 1rem 0 0;
+  margin-top: -6rem;
+  padding: 2rem 3rem;
+  position: relative;
+  z-index: 9;
+}
+.Page {
+  padding: 3rem 0;
+  &--alt {
+    background-color: $bodyColorAlt;
+    .Page__wrapper {
+      background-color: $bodyColorAlt;
+    }
+  }
+}
+.Page__subtitle {
+  color: $firstColor;
+  font-family: $frankfurter-font;
+  font-size: 0.875rem;
+}
+.Page__title {
+  color: $headingColor;
+  font-size: 2rem;
+}
