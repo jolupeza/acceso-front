@@ -1,0 +1,22 @@
+.Elements {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+.Elements__icon {
+  [class^=icon-] {
+    color: $firstColor;
+    font-size: 3rem;
+  }
+}
+.Elements__number {
+  color: $firstColor;
+  font-family: $frankfurter-font;
+  font-size: 1.75rem;
+}
+.Elements__title {
+  color: $grayColor;
+  font-family: $centuryBold-font;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+}

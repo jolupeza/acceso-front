@@ -18,18 +18,16 @@
   font-weight: normal;
   font-style: normal;
 }
-
 @font-face {
   font-family: 'icomoon';
-  src: url('./../fonts/icomoon.eot?4h7edh');
+  src: url('./../fonts/icomoon.eot?9ol1dh');
   src:
-    url('./../fonts/icomoon.eot?4h7edh#iefix') format('embedded-opentype'),
-    url('./../fonts/icomoon.ttf?4h7edh') format('truetype'),
-    url('./../fonts/icomoon.woff?4h7edh') format('woff'),
-    url('./../fonts/icomoon.svg?4h7edh#icomoon') format('svg');
+    url('./../fonts/icomoon.eot?9ol1dh#iefix') format('embedded-opentype'),
+    url('./../fonts/icomoon.ttf?9ol1dh') format('truetype'),
+    url('./../fonts/icomoon.woff?9ol1dh') format('woff'),
+    url('./../fonts/icomoon.svg?9ol1dh#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
-  font-display: block;
 }
 [class^="icon-"],
 [class*=" icon-"] {
@@ -42,6 +40,48 @@
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+.icon-clock::before {
+  content: "\e915";
+}
+.icon-dollar::before {
+  content: "\e914";
+}
+.icon-refresh::before {
+  content: "\e90c";
+}
+.icon-sync::before {
+  content: "\e90c";
+}
+.icon-reload::before {
+  content: "\e90c";
+}
+.icon-loading::before {
+  content: "\e90c";
+}
+.icon-automobile::before {
+  content: "\e911";
+}
+.icon-car::before {
+  content: "\e911";
+}
+.icon-smile-o::before {
+  content: "\e912";
+}
+.icon-user-o::before {
+  content: "\e913";
+}
+.icon-youtube-play::before {
+  content: "\e910";
+}
+.icon-instagram::before {
+  content: "\e90d";
+}
+.icon-user-circle-o::before {
+  content: "\e90e";
+}
+.icon-user-circle::before {
+  content: "\e90f";
 }
 .icon-social-twitter::before {
   content: "\e900";
@@ -78,28 +118,4 @@
 }
 .icon-arrow_back::before {
   content: "\e90b";
-}
-.icon-refresh::before {
-  content: "\e90c";
-}
-.icon-sync::before {
-  content: "\e90c";
-}
-.icon-reload::before {
-  content: "\e90c";
-}
-.icon-loading::before {
-  content: "\e90c";
-}
-.icon-youtube-play::before {
-  content: "\e910";
-}
-.icon-instagram::before {
-  content: "\e90d";
-}
-.icon-user-circle-o::before {
-  content: "\e90e";
-}
-.icon-user-circle::before {
-  content: "\e90f";
 }

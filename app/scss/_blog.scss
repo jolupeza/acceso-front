@@ -1,0 +1,38 @@
+.Blog {
+  margin: 3rem 0;
+}
+.Blog__item__figure {
+  position: relative;
+}
+.Blog__item__caption {
+  bottom: 0;
+  padding: 0.8rem;
+  position: absolute;
+  width: 100%;
+}
+.Blog__item__date {
+  color: white;
+  font-family: $centuryBold-font;
+  font-size: 0.875rem;
+  margin-bottom: 0;
+}
+.Blog__item__title {
+  font-size: 1.125rem;
+  a {
+    color: white;
+    &:focus,
+    &:hover {
+      color: $secondColor;
+    }
+  }
+}
+.Blog__item {
+  &--featured {
+    .Blog__item__caption {
+      padding: 2rem;
+    }
+    .Blog__item__title {
+      font-size: 1.75rem;
+    }
+  }
+}

@@ -70,4 +70,7 @@
       }
     }
   }
+  &--bg {
+    background: $bodyColor url(./../images/bg_blog.png) 0 bottom no-repeat;
+  }
 }
