@@ -130,6 +130,8 @@ gulp.task('browsersync', ['compress', 'style'], () => {
   gulp.watch(config.jsDir + '/*.js', ['js-sync']);
 });
 
+gulp.task('dist', ['imagemin', 'css']);
+
 gulp.task('default', ['browsersync']);
 
 /*gulp.task()
