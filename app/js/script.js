@@ -3,34 +3,35 @@
 ;
 
 (function ($) {
-  var $window = $(window),
-      statusSearch = false,
-      bxFigureCars = null;
+  var $window = $(window);
+  /*statusSearch = false,
+  bxFigureCars = null;*/
+
   $(function () {
-    $window.on('scroll', function () {
-      checkScroll();
+    $window.on('scroll', function () {// checkScroll();
     });
     $window.on('resize', function () {
-      setTopSidebar();
-      checkSearch();
+      /*setTopSidebar();
+      checkSearch();*/
     });
-    checkScroll();
+    /*checkScroll();
     setTopSidebar();
     checkSearch();
-    initColumnTable();
-    $('.ArrowTop').on('click', function (ev) {
+    initColumnTable();*/
+
+    /*$('.ArrowTop').on('click', (ev) => {
       ev.preventDefault();
-      $('html, body').animate({
+       $('html, body').animate({
         scrollTop: 0
       }, 800);
-    });
-    $('.js-toggle-sidebar a').on('click', function (ev) {
+    });*/
+
+    /*$('.js-toggle-sidebar a').on('click', function(ev) {
       ev.preventDefault();
-      var $this = $(this),
+       let $this = $(this),
           Sidebar = $('.Sidebar'),
           icon = $this.children();
-
-      if (Sidebar.hasClass('active')) {
+       if (Sidebar.hasClass('active')) {
         Sidebar.removeClass('active');
         icon.removeClass('icon-close').addClass('icon-bars');
         document.documentElement.style.setProperty('--body-ov', 'auto');
@@ -39,108 +40,101 @@
         icon.removeClass('icon-bars').addClass('icon-close');
         document.documentElement.style.setProperty('--body-ov', 'hidden');
       }
-    });
-    $('[data-toggle="collapse"]').on('click', function (ev) {
+    });*/
+
+    /*$('[data-toggle="collapse"]').on('click', function (ev) {
       ev.preventDefault();
-      var $this = $(this),
+       let $this = $(this),
           parent = $this.closest('.Form__collapse'),
           content = parent.find('.Form__collapse__content');
-
-      if (content.hasClass('show')) {
+       if (content.hasClass('show')) {
         $this.removeClass('icon-minus').addClass('icon-plus');
-        content.removeClass('show');
+        content.removeClass('show')
       } else {
         $this.removeClass('icon-plus').addClass('icon-minus');
-        content.addClass('show');
+        content.addClass('show')
       }
-    });
-    $('#js-toggle-search').on('click', function (ev) {
-      ev.preventDefault();
-      var search = $('#js-search');
+    });*/
 
-      if (search.hasClass('active')) {
-        search.fadeOut('slow', function () {
+    /*$('#js-toggle-search').on('click', function (ev) {
+      ev.preventDefault();
+       let search = $('#js-search');
+       if (search.hasClass('active')) {
+        search.fadeOut('slow', function() {
           search.removeClass('active');
           statusSearch = false;
         });
       } else {
-        search.fadeIn('slow', function () {
+        search.fadeIn('slow', function() {
           search.addClass('active');
-          statusSearch = true;
+          statusSearch =  true;
         });
       }
-    });
-    bxFigureCars = $('.bxslider').bxSlider({
+    })*/
+
+    /*bxFigureCars = $('.bxslider').bxSlider({
       pagerCustom: '.bx-pager',
       auto: true,
       onSliderLoad: bxSliderIsSolid()
-    });
-    $('#js-show-form').on('click', function (ev) {
+    });*/
+
+    /*$('#js-show-form').on('click', function(ev) {
       ev.preventDefault();
-      var $this = $(this),
+       let $this = $(this),
           form = $('.Single__form');
-      $this.fadeOut();
+       $this.fadeOut();
       form.fadeIn();
-    });
+    });*/
   });
-
-  var checkScroll = function checkScroll() {
-    var arrow = $('.ArrowTop');
-
-    if (wViewport() < 992) {
+  /*let checkScroll = () => {
+    let arrow = $('.ArrowTop');
+     if (wViewport() < 992) {
       arrow.fadeOut();
       return;
     }
-
-    if ($window.scrollTop() > 150) {
+     if ($window.scrollTop() > 150) {
       arrow.fadeIn();
     } else {
       arrow.fadeOut();
     }
-  };
+  }*/
 
-  var setTopSidebar = function setTopSidebar() {
-    var topSidebar = heightHeader() + heightMenuMovil();
-    document.documentElement.style.setProperty('--top-sidebar', topSidebar);
-  };
+  /*let setTopSidebar = () => {
+    let topSidebar = heightHeader() + heightMenuMovil();
+     document.documentElement.style.setProperty('--top-sidebar', topSidebar);
+  }*/
 
-  var checkSearch = function checkSearch() {
-    var search = $('#js-search');
-
-    if (statusSearch) {
-      return;
-    }
-
-    if (window.matchMedia("(max-width: 991px)").matches) {
-      search.fadeOut('fast', function () {
-        search.removeClass('active');
+  /*let checkSearch = () => {
+    let search = $('#js-search');
+     if (statusSearch) { return; }
+     if (window.matchMedia("(max-width: 991px)").matches) {
+      search.fadeOut('fast', function() {
+        search.removeClass('active')
       });
     } else {
-      search.fadeIn('fast', function () {
-        search.addClass('active');
+      search.fadeIn('fast', function() {
+        search.addClass('active')
       });
     }
-  };
+  }*/
 
-  var initColumnTable = function initColumnTable() {
-    var table = $('#nav-characteristics .Table'),
+  /*let initColumnTable = () => {
+    let table = $('#nav-characteristics .Table'),
         items = table.children('article'),
         totalItems = items.length,
         halfItems = Math.ceil(totalItems / 2);
-    items.wrapAll('<div class="row"></div>');
-    items.slice(0, halfItems).wrapAll('<div class="col-lg-6"></div>');
-    items.slice(halfItems, totalItems).wrapAll('<div class="col-lg-6"></div>');
-  };
+     items.wrapAll('<div class="row"></div>');
+    items.slice(0, halfItems).wrapAll('<div class="col-lg-6"></div>')
+    items.slice(halfItems, totalItems).wrapAll('<div class="col-lg-6"></div>')
+  }*/
 
-  var bxSliderIsSolid = function bxSliderIsSolid() {
-    var bxSlider = $('.bxslider'),
+  /*let bxSliderIsSolid = () => {
+    let bxSlider = $('.bxslider'),
         isSold = bxSlider.data('issold') === 'on' ? true : false;
-
-    if (isSold) {
-      // console.log(bxSlider.closest('.bx-viewport'))
-      bxSlider.parent().addClass('isSold');
+     if (isSold) {
+      bxSlider.parent().addClass('isSold')
     }
-  };
+  }*/
 
   var hViewport = function hViewport() {
     return Math.max(document.documentElement.clientHeight, window.innerHeight || 0);

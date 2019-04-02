@@ -2071,6 +2071,21 @@ input[type="submit"].btn-block,input[type="reset"].btn-block,input[type="button"
   z-index: 1;
 }
 
+.btn-toolbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.btn-toolbar .input-group {
+  width: auto;
+}
+
 .btn-group > .btn:not(:first-child),.btn-group > .btn-group:not(:first-child) {
   margin-left: -1px;
 }
@@ -7927,6 +7942,10 @@ body {
   font-family: "CenturyGothic", sans-serif;
   font-size: 16px;
   position: relative;
+}
+
+body.toolbar-tray-open .Header {
+  top: 79px;
 }
 
 a {

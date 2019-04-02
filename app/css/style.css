@@ -10796,6 +10796,8 @@ body {
   font-family: "CenturyGothic", sans-serif;
   font-size: 16px;
   position: relative; }
+  body.toolbar-tray-open .Header {
+    top: 79px; }
 
 a {
   color: #579bcb;

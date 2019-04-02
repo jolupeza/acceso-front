@@ -4,6 +4,11 @@ body {
   font-family: $body-font;
   font-size: 16px;
   position: relative;
+  &.toolbar-tray-open {
+    .Header {
+      top: 79px;
+    }
+  }
 }
 a {
   color: $firstColorAlt;

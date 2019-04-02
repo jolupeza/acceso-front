@@ -1,34 +1,34 @@
 "use strict";
 
 ;(function($) {
-  let $window = $(window),
-      statusSearch = false,
-      bxFigureCars = null;
+  let $window = $(window);
+      /*statusSearch = false,
+      bxFigureCars = null;*/
 
   $(function () {
     $window.on('scroll', function() {
-      checkScroll();
+      // checkScroll();
     });
 
     $window.on('resize', function () {
-      setTopSidebar();
-      checkSearch();
+      /*setTopSidebar();
+      checkSearch();*/
     });
 
-    checkScroll();
+    /*checkScroll();
     setTopSidebar();
     checkSearch();
-    initColumnTable();
+    initColumnTable();*/
 
-    $('.ArrowTop').on('click', (ev) => {
+    /*$('.ArrowTop').on('click', (ev) => {
       ev.preventDefault();
 
       $('html, body').animate({
         scrollTop: 0
       }, 800);
-    });
+    });*/
 
-    $('.js-toggle-sidebar a').on('click', function(ev) {
+    /*$('.js-toggle-sidebar a').on('click', function(ev) {
       ev.preventDefault();
 
       let $this = $(this),
@@ -44,9 +44,9 @@
         icon.removeClass('icon-bars').addClass('icon-close');
         document.documentElement.style.setProperty('--body-ov', 'hidden');
       }
-    });
+    });*/
 
-    $('[data-toggle="collapse"]').on('click', function (ev) {
+    /*$('[data-toggle="collapse"]').on('click', function (ev) {
       ev.preventDefault();
 
       let $this = $(this),
@@ -60,9 +60,9 @@
         $this.removeClass('icon-plus').addClass('icon-minus');
         content.addClass('show')
       }
-    });
+    });*/
 
-    $('#js-toggle-search').on('click', function (ev) {
+    /*$('#js-toggle-search').on('click', function (ev) {
       ev.preventDefault();
 
       let search = $('#js-search');
@@ -78,15 +78,15 @@
           statusSearch =  true;
         });
       }
-    })
+    })*/
 
-    bxFigureCars = $('.bxslider').bxSlider({
+    /*bxFigureCars = $('.bxslider').bxSlider({
       pagerCustom: '.bx-pager',
       auto: true,
       onSliderLoad: bxSliderIsSolid()
-    });
+    });*/
 
-    $('#js-show-form').on('click', function(ev) {
+    /*$('#js-show-form').on('click', function(ev) {
       ev.preventDefault();
 
       let $this = $(this),
@@ -94,10 +94,10 @@
 
       $this.fadeOut();
       form.fadeIn();
-    });
+    });*/
   });
 
-  let checkScroll = () => {
+  /*let checkScroll = () => {
     let arrow = $('.ArrowTop');
 
     if (wViewport() < 992) {
@@ -110,15 +110,15 @@
     } else {
       arrow.fadeOut();
     }
-  }
+  }*/
 
-  let setTopSidebar = () => {
+  /*let setTopSidebar = () => {
     let topSidebar = heightHeader() + heightMenuMovil();
 
     document.documentElement.style.setProperty('--top-sidebar', topSidebar);
-  }
+  }*/
 
-  let checkSearch = () => {
+  /*let checkSearch = () => {
     let search = $('#js-search');
 
     if (statusSearch) { return; }
@@ -132,9 +132,9 @@
         search.addClass('active')
       });
     }
-  }
+  }*/
 
-  let initColumnTable = () => {
+  /*let initColumnTable = () => {
     let table = $('#nav-characteristics .Table'),
         items = table.children('article'),
         totalItems = items.length,
@@ -143,17 +143,16 @@
     items.wrapAll('<div class="row"></div>');
     items.slice(0, halfItems).wrapAll('<div class="col-lg-6"></div>')
     items.slice(halfItems, totalItems).wrapAll('<div class="col-lg-6"></div>')
-  }
+  }*/
 
-  let bxSliderIsSolid = () => {
+  /*let bxSliderIsSolid = () => {
     let bxSlider = $('.bxslider'),
         isSold = bxSlider.data('issold') === 'on' ? true : false;
 
     if (isSold) {
-      // console.log(bxSlider.closest('.bx-viewport'))
       bxSlider.parent().addClass('isSold')
     }
-  }
+  }*/
 
   let hViewport = () => {
     return Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
